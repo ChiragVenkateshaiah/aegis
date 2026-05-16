@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables — NEVER commit API keys
+.env
+.env.*
+
+# Data files (can be large — keep out of Git)
+data/raw/
+data/synthetic/*.json
+data/synthetic/*.csv
+*.parquet
+
+# Databricks
+.databricks/
+databricks.yml
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
