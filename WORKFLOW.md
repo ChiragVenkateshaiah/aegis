@@ -4,6 +4,15 @@
 
 ---
 
+## Session-start rules (read these first, every session)
+
+These two rules apply to **every Cowork session** and **every Claude Code CLI session** that touches AEGIS. They exist because the build doubles as deliberate practice for the **CCF-A** exam — see [AGENT_PRIMER.md](AGENT_PRIMER.md) and [CCF_A_MAPPING.md](CCF_A_MAPPING.md).
+
+1. **Every session reads [AGENT_PRIMER.md](AGENT_PRIMER.md) first**, before reading PROJECT_SPEC, PHASES, or any prompt. The primer is short and tells you what CCF-A topics this build practices and how to header/recap each chunk. If a session skips the primer, the practice tagging drifts and the coverage math goes stale.
+2. **Every Day prompt in `docs/prompts/` includes a CCF-A Practice Header** at the top of its paste-this body (full form for chunks ≥ 1 hour, compressed form for short Sonnet chunks). The header names the *primary* topic, any *secondary* topics, and explicitly lists the topics **deliberately not practiced** in this chunk. The recap goes at the bottom of the same file after the chunk finishes. The template lives in [AGENT_PRIMER.md](AGENT_PRIMER.md) §3–§4.
+
+---
+
 ## The two-tool loop
 
 We use two Claude surfaces in tandem:
@@ -51,10 +60,15 @@ Every Day prompt in `docs/prompts/` follows this shape:
 **Estimated time:** ~Nh
 **Mode:** /plan first, then execute    (or: direct execute)
 
+## Paste-this prompt for Claude Code CLI
+
+<CCF-A Practice Header — see AGENT_PRIMER.md §3 for the full block. Required at the top of every chunk body. Compressed form for chunks under ~30 min.>
+
 ## Context
 <2–4 paragraphs of background — what we have, what's missing, why this matters now>
 
 ## Inputs (read first)
+- AGENT_PRIMER.md  ← always first
 - file: path/to/something.md
 - ADR: docs/adr/NNNN-slug.md
 - reference: docs/reference/<file>
@@ -74,6 +88,9 @@ A short, testable description: "Running `make schema-apply` on a fresh Postgres 
 
 ## Open questions for the operator
 - Anything Claude Code should pause and ask before deciding
+
+## Practice Recap — Day NN
+<filled in after the chunk finishes; template in AGENT_PRIMER.md §4>
 ```
 
 ---
@@ -129,6 +146,8 @@ Otherwise direct-execute is fine.
 
 | File | Maintained by | Cadence |
 |---|---|---|
+| `AGENT_PRIMER.md` | Cowork | When practice rules change (rare) |
+| `CCF_A_MAPPING.md` | Cowork | When a new deliverable is added or re-tagged (via ADR) |
 | `PROJECT_SPEC.md` | Cowork | When direction changes |
 | `PHASES.md` | Cowork | After every chunk |
 | `DECISIONS.md` (+ `docs/adr/`) | Cowork | When a decision is made |

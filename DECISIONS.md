@@ -15,6 +15,8 @@
 | 0008 | 2026-05-16 | Dev workflow = Cowork plans, Claude Code CLI executes | Accepted | See WORKFLOW.md. Chunked per-phase prompts; plan mode for non-trivial chunks | — |
 | 0009 | 2026-05-16 | Day 1 deliverable = ontology Postgres DDL | Accepted | Contract-first; extraction/reconciliation/memo all bind to the ontology | [docs/adr/0009-day1-ontology-first.md](docs/adr/0009-day1-ontology-first.md) |
 | 0010 | 2026-05-16 | Folder layout = standard (docs/data/src/evals/notebooks) | Accepted | Industry-standard; survives the project growing past Week 3 | — |
+| 0011 | 2026-05-16 | Ontology design choices (inheritance model, provenance shape, FK cascades) | Reserved | Slot reserved; written by Claude Code CLI after Day 1 execution per WEEK_01_TASKS.md | [docs/adr/0011-ontology-design-choices.md](docs/adr/0011-ontology-design-choices.md) (planned) |
+| 0012 | 2026-05-16 | AEGIS is dual-purpose: FDE portfolio piece + CCF-A exam practice | Accepted | Practice surface area is calibrated to exam weights (T1 27 / T2 20 / T3 20 / T4 18 / T5 15) within ±1%; mapping lives in CCF_A_MAPPING.md, primer lives in AGENT_PRIMER.md | [docs/adr/0012-ccf-a-syllabus-mapping.md](docs/adr/0012-ccf-a-syllabus-mapping.md) |
 
 ---
 

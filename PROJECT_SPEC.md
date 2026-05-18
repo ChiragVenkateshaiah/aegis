@@ -16,6 +16,17 @@ Aegis is an AI-powered credit memo / underwriting co-pilot for SME lending. It r
 4. Computing key ratios against lender thresholds
 5. Generating a draft memo with every claim cited back to source pages
 
+## 1.1. Dual purpose — portfolio + CCF-A practice
+
+AEGIS is being built for two reasons at once:
+
+1. **Forward Deployed Engineer portfolio piece** — a credible, eval-backed demo that supports $300K+ FDE conversations in interviews. This is the primary, externally-visible purpose and shapes every product decision in §§2–10 below.
+2. **Deliberate practice for Anthropic's CCF-A certification** — every phase is engineered so its load-bearing deliverables also exercise specific CCF-A exam topics in proportion to their exam weights (T1 Agentic Architecture 27%, T2 Claude Code 20%, T3 Prompts/Structured Output 20%, T4 Tools/MCP 18%, T5 Context/Reliability 15%).
+
+The two purposes are *aligned*, not in tension: a production-shaped AI underwriting system genuinely needs agentic orchestration (T1), well-engineered prompts and structured outputs (T3), tool design and MCP surfaces (T4), and reliability scaffolding (T5). The Claude Code workflow configuration (T2) gets first-class treatment because *how* AEGIS is built is itself part of the case study.
+
+The mapping between deliverables and exam topics lives in [CCF_A_MAPPING.md](CCF_A_MAPPING.md); the operating manual for keeping practice tagging consistent across sessions lives in [AGENT_PRIMER.md](AGENT_PRIMER.md). The dual purpose adds a handful of deliverables to the original 8-week plan (two MCP servers, a reconciliation orchestrator with parallel subagents, a memo composer agent, an LLM-as-judge agent, plus Claude Code configuration surfaces — `CLAUDE.md`, slash commands, hooks). It does **not** change the product targets in §9 or the out-of-scope items in §10.
+
 ## 2. The 60-second demo (v1 forcing function)
 
 A credit analyst at a $20B community bank receives an SME loan application — a small services business asking for $400K. They drag-and-drop two PDFs (business tax return + 6 months of bank statements) into Aegis. The ontology populates live. They see a pre-populated credit memo with every claim citing back to specific PDF pages, **three exception flags** highlighted including *"Reported revenue $2.4M, bank deposits suggest $1.7M — flag for review."* The analyst clicks the flag, sees the discrepancy with source pages highlighted. One edit, approve, send to committee. **Eight minutes elapsed vs. six hours traditionally.**

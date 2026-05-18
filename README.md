@@ -8,6 +8,10 @@ Reduces credit memo preparation time from ~6 hours to ~8 minutes by extracting f
 
 **Portfolio goal:** Forward Deployed Engineer (FDE) positioning for AI labs, Palantir-style enterprise software shops, and in-house AI solutions teams at fintechs.
 
+**Secondary goal (cert prep):** The build doubles as deliberate practice for Anthropic's **CCF-A** (Claude Certified Foundations — Architect) exam. Each phase is calibrated so its deliverables exercise specific CCF-A topics in proportion to their exam weights. See [`AGENT_PRIMER.md`](AGENT_PRIMER.md) for the per-session practice protocol and [`CCF_A_MAPPING.md`](CCF_A_MAPPING.md) for the deliverable-to-topic mapping.
+
+> **Every session — Cowork or Claude Code — reads [`AGENT_PRIMER.md`](AGENT_PRIMER.md) first.**
+
 ---
 
 ## Repository map
@@ -15,8 +19,10 @@ Reduces credit memo preparation time from ~6 hours to ~8 minutes by extracting f
 ```
 aegis/
 ├── README.md                  ← you are here
+├── AGENT_PRIMER.md            ← read first, every session — CCF-A practice protocol
+├── CCF_A_MAPPING.md           ← deliverables ↔ CCF-A exam topics (coverage hits weights ±1%)
 ├── PROJECT_SPEC.md            ← living spec (source of truth, evolves)
-├── PHASES.md                  ← 8-week phased plan + status
+├── PHASES.md                  ← 8-week phased plan + status (+ CCF-A topic per deliverable)
 ├── DECISIONS.md               ← architecture decision log
 ├── WORKFLOW.md                ← Cowork-plans / Claude-Code-executes workflow
 ├── WEEK_01_TASKS.md           ← Phase 1 / Week 1 evening blocks
