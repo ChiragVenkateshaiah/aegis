@@ -123,18 +123,17 @@ Add a tiny shell script `data/schemas/check.sh` that runs the verification and e
 
 > Fill in after Claude Code CLI finishes the chunk. Template lives in `AGENT_PRIMER.md §4`.
 
-**Date completed:** _YYYY-MM-DD_
-**Time spent:** _~Nh_
+**Date completed:** 2026-05-19
+**Time spent:** ~1 evening session
 
 **Intended primary topic:** [T5] Context Management & Reliability
 **Actually exercised:**
-  - [T5] Context Management & Reliability — _<one line: what specifically did you do that practiced this — e.g., the JSONB raw_blob design, the bbox column choice, the confidence-numeric calibration column>_
+  - [T5] Context Management & Reliability — Designed the provenance substrate: `source_document_id`, `page_number`, `bounding_box` (JSONB), `extractor_model`, `confidence` (NUMERIC 0–1), `raw_blob` (JSONB) repeated inline on every fact-bearing table (line_items, ratios, reconciliations, exception_flags, memo_citations). Used `RESTRICT` cascade on all provenance FKs so losing a source document never silently deletes the evidence row citing it.
 
 **Surprise lesson (one line):**
-_<the single thing you didn't know at the start of the chunk that you do now — exam-relevant only>_
+Provenance is more naturally a repeated inline column pattern than a normalized join — trading schema verbosity for query simplicity and avoiding a hot join on every evidence lookup.
 
 **Drift check:**
-  - Did this chunk drift into a topic the header said we wouldn't practice? [Y/N]
-  - If yes: _<one line>_
+  - Did this chunk drift into a topic the header said we wouldn't practice? N
 
 **Cross-ref:** CCF_A_MAPPING.md §4 row 1.3

@@ -12,19 +12,19 @@
 ## Phase 1 — Foundation (Week 1)
 
 **Goal:** Lock the data model, understand the domain, generate the synthetic corpus seed, *and* establish the Claude Code workflow surfaces (CLAUDE.md, slash commands, hooks) that the rest of the build will use.
-**Status:** ◐ in progress (Day 1: ontology schema)
+**Status:** ◐ in progress (Day 1 ✅ · Day 01.5 ✅ complete — Day 2 next: OCC credit-memo template study)
 
 | # | Deliverable | CCF-A | Status | Notes |
 |---|---|---|---|---|
 | 1.1 | Read first half of Ittelson (Chapters 1–8) | — | ☐ | Evenings |
 | 1.2 | Study a real credit memo template (OCC) | — | ☐ | 1 evening block |
-| 1.3 | **Ontology schema — Postgres DDL** | **T5** | ◐ | **Day 1 — see WEEK_01_TASKS.md** |
+| 1.3 | **Ontology schema — Postgres DDL** | **T5** | ✅ | **Day 1 complete 2026-05-19 — DDL + seed + check.sh all-green** |
 | 1.4 | Synthetic borrower persona spec (30–50 personas) | T3 | ☐ | services / retail / restaurant |
 | 1.5 | Generate v0 synthetic corpus (3 borrowers end-to-end as smoke test) | T3 | ☐ | end of week |
 | 1.6 | Lock data dictionary (per ontology table) | — | ☐ | derives from 1.3 |
-| **1.7** | **`CLAUDE.md` at repo root** (memory file) | **T2** | ☐ | Project conventions, file map, model preferences, the "read AGENT_PRIMER.md first" rule |
-| **1.8** | **Custom slash commands** (`/aegis-plan`, `/aegis-extract`, `/aegis-recon`) | **T2** | ☐ | Each command launches a chunk with its Practice Header baked in |
-| **1.9** | **Hooks** (pre-commit schema-validate, post-tool-use eval-log) | **T2** | ☐ | Practice the Claude Code hook surfaces; useful in their own right |
+| **1.7** | **`CLAUDE.md` at repo root** (memory file) | **T2** | ✅ | **shipped 2026-05-19** — project conventions, file map, model preferences, the "read AGENT_PRIMER.md first" rule |
+| **1.8** | **Custom slash commands** (`/aegis-plan`, `/aegis-status`, `/aegis-recap`) | **T2** | ✅ | **shipped 2026-05-19** — chunk launchers wired into the workflow; `/aegis-extract` and `/aegis-recon` deferred to Phase 2/3 |
+| **1.9** | **Hooks** (SessionStart reminder, PostToolUse schema-modified reminder) | **T2** | ✅ | **shipped 2026-05-19** — two hooks in `.claude/settings.json`; reminder injected into Claude's context via JSON additionalContext |
 
 **Phase exit criteria:**
 - Ontology DDL applies cleanly to a fresh Postgres instance, with seed data.

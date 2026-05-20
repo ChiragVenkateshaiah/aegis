@@ -46,8 +46,8 @@ These are the items that didn't exist in the original 8-week plan but earn their
 | Tag | Deliverable | Phase | Primary topic |
 |---|---|---|---|
 | **1.7** | `CLAUDE.md` at repo root (memory file) | 1 | T2 |
-| **1.8** | Custom slash commands (`/aegis-plan`, `/aegis-extract`, `/aegis-recon`) | 1 | T2 |
-| **1.9** | Hooks (pre-commit schema-validate; post-tool-use eval-log) | 1 | T2 |
+| **1.8** | Custom slash commands (`/aegis-plan`, `/aegis-status`, `/aegis-recap`) | 1 | T2 |
+| **1.9** | Hooks (SessionStart reminder; PostToolUse schema-modified reminder) | 1 | T2 |
 | **2.7** | `aegis-ontology-mcp` server — ontology read/write tools surfaced to Claude Code | 2 | T4 |
 | **2.8** | Subdirectory `CLAUDE.md/` memory files (per-module context) | 2 | T2 |
 | **3.7** | Reconciliation orchestrator with **parallel subagents** (one per recon check) | 3 | T1 |
@@ -74,8 +74,8 @@ Each phase below lists every deliverable (existing + new), its primary CCF-A top
 | 1.5 | v0 synthetic corpus (3 borrowers, smoke test) | T3 | — | Prompt-engineered LLM synthesis with consistency checks |
 | 1.6 | Data dictionary | — | — | Documentation; not CCF-A |
 | **1.7** | **`CLAUDE.md` at repo root** | **T2** | — | The core Claude Code config primitive — project-level memory, conventions, file map |
-| **1.8** | **Custom slash commands** | **T2** | — | `/aegis-plan`, `/aegis-extract`, `/aegis-recon` — chunk launchers wired into the workflow |
-| **1.9** | **Hooks** | **T2** | — | `pre-commit` schema-validate; `post-tool-use` eval-log — Claude Code hook surfaces in practice |
+| **1.8** | **Custom slash commands** (`/aegis-plan`, `/aegis-status`, `/aegis-recap`) | **T2** | — | Chunk launchers wired into the workflow. `/aegis-extract` and `/aegis-recon` deferred to Phase 2/3 alongside their target modules. |
+| **1.9** | **Hooks** | **T2** | — | `SessionStart` AGENT_PRIMER.md reminder; `PostToolUse` schema-modified reminder injected into Claude's context — Claude Code hook surfaces in practice |
 
 ### Phase 2 — Extraction (Weeks 2–3)
 
@@ -160,9 +160,9 @@ When you finish a chunk, you log a one-line **Practice Recap** noting what you a
 
 | # | Deliverable | Status |
 |---|---|---|
-| 1.7 | `CLAUDE.md` at repo root | ☐ |
-| 1.8 | Custom slash commands | ☐ |
-| 1.9 | Hooks | ☐ |
+| 1.7 | `CLAUDE.md` at repo root | ✅ |
+| 1.8 | Custom slash commands | ✅ |
+| 1.9 | Hooks | ✅ |
 | 2.7 | `aegis-ontology-mcp` server | ☐ |
 | 2.8 | Subdirectory `CLAUDE.md/` memory files | ☐ |
 | 3.7 | Reconciliation orchestrator + parallel subagents | ☐ |

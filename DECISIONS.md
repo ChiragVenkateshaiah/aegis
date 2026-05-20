@@ -17,6 +17,8 @@
 | 0010 | 2026-05-16 | Folder layout = standard (docs/data/src/evals/notebooks) | Accepted | Industry-standard; survives the project growing past Week 3 | — |
 | 0011 | 2026-05-16 | Ontology design choices (inheritance model, provenance shape, FK cascades) | Reserved | Slot reserved; written by Claude Code CLI after Day 1 execution per WEEK_01_TASKS.md | [docs/adr/0011-ontology-design-choices.md](docs/adr/0011-ontology-design-choices.md) (planned) |
 | 0012 | 2026-05-16 | AEGIS is dual-purpose: FDE portfolio piece + CCF-A exam practice | Accepted | Practice surface area is calibrated to exam weights (T1 27 / T2 20 / T3 20 / T4 18 / T5 15) within ±1%; mapping lives in CCF_A_MAPPING.md, primer lives in AGENT_PRIMER.md | [docs/adr/0012-ccf-a-syllabus-mapping.md](docs/adr/0012-ccf-a-syllabus-mapping.md) |
+| 0013 | 2026-05-19 | **Phase 1 / Day 1 milestone: Ontology DDL shipped and acceptance-tested** | Accepted | 13 tables, 20 indexes, minimal seed, check.sh — all 26 assertions green against Postgres 16 in Docker. TPT inheritance for documents; RESTRICT cascade on provenance FKs; inline provenance columns on all fact-bearing tables. Dev environment: Docker Desktop + Git Bash + `MSYS_NO_PATHCONV=1` (permanent in `.bashrc`). | — |
+| 0014 | 2026-05-19 | **Claude Code workflow surfaces: `CLAUDE.md` + 3 slash commands + 2 hooks** | Accepted | Project memory at repo root, three single-file slash commands under `.claude/commands/`, two narrowly-scoped hooks in `.claude/settings.json`. Banks all 13 Phase-1 T2 points. | [docs/adr/0013-claude-code-workflow-surfaces.md](docs/adr/0013-claude-code-workflow-surfaces.md) |
 
 ---
 

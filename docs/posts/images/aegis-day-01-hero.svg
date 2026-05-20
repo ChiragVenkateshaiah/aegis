@@ -1,0 +1,106 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AEGIS — AI Credit Memo Co-pilot, Day 1</title>
+  <desc id="desc">Hero image. A deep-navy geometric shield contains a network of twelve gold nodes representing the AEGIS ontology graph. The shield is captioned AEGIS, with the product positioning beneath it and a 6 hours to 8 minutes transformation line at the bottom.</desc>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F4EFE6"/>
+
+  <!-- Editorial hairlines -->
+  <line x1="60" y1="80" x2="1140" y2="80" stroke="#D9CFBE" stroke-width="0.8"/>
+  <line x1="60" y1="558" x2="1140" y2="558" stroke="#D9CFBE" stroke-width="0.8"/>
+
+  <!-- Top labels -->
+  <text x="60" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="13" fill="#7A6F5C" letter-spacing="5">DAY 01 — FOUNDATION</text>
+  <text x="1140" y="58" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="13" fill="#7A6F5C" letter-spacing="5">ONTOLOGY &amp; PROVENANCE</text>
+
+  <!-- Shield group, centered at x=600 -->
+  <g transform="translate(490, 110)">
+    <!-- Outer shield -->
+    <path d="M 110 0 L 0 30 L 0 150 Q 0 222 110 274 Q 220 222 220 150 L 220 30 Z"
+          fill="#1F2D3F"/>
+    <!-- Inner bevel -->
+    <path d="M 110 14 L 14 38 L 14 150 Q 14 213 110 260 Q 206 213 206 150 L 206 38 Z"
+          fill="none" stroke="#2C3A4F" stroke-width="1.5"/>
+
+    <!-- Ontology network (12 nodes, ~14 edges) — gold -->
+    <g stroke="#D4A574" stroke-width="0.8" fill="none" opacity="0.55">
+      <!-- edges: borrower→entity, entity→period, period→tax_return, period→bank_stmt, doc→line_item, line_item→ratio, line_item→reconciliation, reconciliation→exception_flag, ratio→memo, memo→memo_citation, etc. -->
+      <line x1="110" y1="48"  x2="68"  y2="78"/>
+      <line x1="110" y1="48"  x2="152" y2="78"/>
+      <line x1="68"  y1="78"  x2="48"  y2="118"/>
+      <line x1="68"  y1="78"  x2="110" y2="118"/>
+      <line x1="152" y1="78"  x2="110" y2="118"/>
+      <line x1="152" y1="78"  x2="172" y2="118"/>
+      <line x1="48"  y1="118" x2="68"  y2="158"/>
+      <line x1="110" y1="118" x2="68"  y2="158"/>
+      <line x1="110" y1="118" x2="152" y2="158"/>
+      <line x1="172" y1="118" x2="152" y2="158"/>
+      <line x1="68"  y1="158" x2="92"  y2="198"/>
+      <line x1="152" y1="158" x2="128" y2="198"/>
+      <line x1="92"  y1="198" x2="128" y2="198"/>
+      <line x1="92"  y1="198" x2="110" y2="232"/>
+      <line x1="128" y1="198" x2="110" y2="232"/>
+    </g>
+    <g fill="#D4A574">
+      <circle cx="110" cy="48"  r="3.2"/>
+      <circle cx="68"  cy="78"  r="3.2"/>
+      <circle cx="152" cy="78"  r="3.2"/>
+      <circle cx="48"  cy="118" r="3.2"/>
+      <circle cx="110" cy="118" r="3.2"/>
+      <circle cx="172" cy="118" r="3.2"/>
+      <circle cx="68"  cy="158" r="3.2"/>
+      <circle cx="152" cy="158" r="3.2"/>
+      <circle cx="92"  cy="198" r="3.2"/>
+      <circle cx="128" cy="198" r="3.2"/>
+      <circle cx="110" cy="232" r="3.2"/>
+      <circle cx="110" cy="14"  r="2.4" opacity="0.7"/>
+    </g>
+
+    <!-- Wordmark inside shield (centered horizontally, lower-third vertically) -->
+    <text x="110" y="148" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="34" font-weight="700"
+          fill="#F4EFE6" letter-spacing="9">AEGIS</text>
+  </g>
+
+  <!-- Subtitle below shield -->
+  <text x="600" y="440" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="23" fill="#3A3328" font-style="italic">An AI credit memo co-pilot for SME lending</text>
+
+  <!-- Tagline (small caps below subtitle) -->
+  <text x="600" y="468" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="11" fill="#7A6F5C" letter-spacing="4">CONTRACT-FIRST · PROVENANCE-NATIVE · CITED-BY-DEFAULT</text>
+
+  <!-- Transformation strip -->
+  <g transform="translate(0, 520)">
+    <!-- 6 hours -->
+    <text x="395" y="0" text-anchor="end"
+          font-family="Georgia, serif"
+          font-size="34" font-weight="700" fill="#1F2D3F">6 hours</text>
+    <text x="395" y="22" text-anchor="end"
+          font-family="Georgia, serif"
+          font-size="12" fill="#7A6F5C" font-style="italic">per credit memo, traditionally</text>
+
+    <!-- Arrow -->
+    <line x1="430" y1="-10" x2="765" y2="-10" stroke="#7A6F5C" stroke-width="1"/>
+    <polygon points="765,-14 775,-10 765,-6" fill="#7A6F5C"/>
+
+    <!-- 8 minutes -->
+    <text x="805" y="0"
+          font-family="Georgia, serif"
+          font-size="34" font-weight="700" fill="#C76B3B">8 minutes</text>
+    <text x="805" y="22"
+          font-family="Georgia, serif"
+          font-size="12" fill="#7A6F5C" font-style="italic">with AEGIS, end-to-end</text>
+  </g>
+
+  <!-- Bottom byline -->
+  <text x="60" y="600"
+        font-family="Georgia, serif"
+        font-size="12" fill="#7A6F5C" font-style="italic">by Chirag · Day 1 of an 8-week build</text>
+  <text x="1140" y="600" text-anchor="end"
+        font-family="Georgia, serif"
+        font-size="12" fill="#7A6F5C" font-style="italic">Built with Claude · Postgres · Databricks</text>
+</svg>
