@@ -24,9 +24,18 @@
 
 ## Day 2 — Real credit memo template study
 
-**Spec sections:** §6 (component 6)
+**Spec sections:** PROJECT_SPEC §6 (component 6)
+**Prompt:** [`docs/prompts/day-02-credit-memo-template.md`](docs/prompts/day-02-credit-memo-template.md)
 **Mode:** Reading + note-taking. No code.
-**Deliverable:** `docs/reference/credit-memo-template-notes.md` summarizing one OCC/RMA template — sections, required fields, citation patterns. This becomes the skeleton for the memo generator in Phase 4.
+**Status:** ✅ Complete 2026-05-21
+
+**Actual output artifacts:**
+- `docs/study/day-02-occ-credit-memo-template.md` — 14 OCC credit-memo sections (what it contains, why it matters, evidence sources)
+- `docs/study/day-02-glossary.md` — 25-term domain glossary with OCC source citations
+- `docs/study/day-02-source-log.md` — source access log (5 sources; OCC PDFs binary; FDIC 403; RMA subscription-only)
+- `docs/notes/day-02-observations.md` — 7 ontology gap observations, parked for future iteration chunk
+
+**Deviation note:** Original deliverable path (docs/reference/) is frozen per CLAUDE.md. Outputs moved to docs/study/ and docs/notes/. WEEK_01_TASKS.md updated to reflect actual paths.
 
 ---
 
