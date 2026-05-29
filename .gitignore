@@ -36,3 +36,10 @@ logs/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Docs — private working files (not for public repo)
+docs/notes/
+docs/posts/
+docs/prompts/
+docs/reference/
+docs/study/

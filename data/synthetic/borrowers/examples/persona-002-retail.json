@@ -1,0 +1,37 @@
+{
+  "persona_id": "002-retail-moderate",
+  "vertical": "retail",
+  "revenue_band": "medium",
+  "difficulty": "moderate",
+
+  "revenue_trend": "stable",
+  "gross_margin_band": "medium",
+  "dscr_band": "adequate",
+  "leverage_band": "moderate",
+
+  "messiness_traits": [
+    "REV-SEASONAL",
+    "EXP-ADDBACKS",
+    "DOC-INTERNAL-ONLY"
+  ],
+
+  "primary_discrepancy": "DISC-REV-DEP",
+  "discrepancy_magnitude": "moderate",
+
+  "owner_ownership_pct": 100,
+  "owner_years_in_industry": 9,
+  "owner_key_person_risk": true,
+  "owner_personal_credit": "adequate",
+  "owner_personal_liquidity": "moderate",
+  "owner_hollow_guarantee_risk": false,
+
+  "loan_type": "revolving_loc",
+  "loan_purpose": "working_capital",
+  "requested_amount_band": "medium",
+  "collateral_type": "ar_inventory",
+  "guarantor_count": 1,
+
+  "business_description": "An independent specialty sporting goods retailer with two store locations in suburban Ohio, generating roughly $1.8M in annual sales with approximately 55% of revenue occurring in the October–December holiday season.",
+  "key_risk_narrative": "Revenue is heavily concentrated in the Q4 holiday window, creating a liquidity squeeze in Q1–Q2; internally prepared financials lack CPA validation and the owner's year-end inventory counts are the sole basis for COGS.",
+  "discrepancy_description": "Tax return reports gross sales of $1,820,000, but annualised bank deposits across two business accounts total $1,490,000 — an 18% shortfall suggesting either unreported cash sales deposited elsewhere or significant uncollected receivables."
+}

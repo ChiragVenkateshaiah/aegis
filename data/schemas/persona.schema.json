@@ -1,0 +1,205 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aegis.internal/schemas/persona.schema.json",
+  "title": "AEGIS Synthetic Borrower Persona",
+  "description": "A persona template used by Day 5 generation prompts to instantiate synthetic borrowers. See data/synthetic/borrowers/PERSONA_SPEC.md for full spec.",
+  "type": "object",
+  "required": [
+    "persona_id",
+    "vertical",
+    "revenue_band",
+    "difficulty",
+    "revenue_trend",
+    "gross_margin_band",
+    "dscr_band",
+    "leverage_band",
+    "messiness_traits",
+    "primary_discrepancy",
+    "discrepancy_magnitude",
+    "owner_ownership_pct",
+    "owner_years_in_industry",
+    "owner_key_person_risk",
+    "owner_personal_credit",
+    "owner_personal_liquidity",
+    "owner_hollow_guarantee_risk",
+    "loan_type",
+    "loan_purpose",
+    "requested_amount_band",
+    "collateral_type",
+    "guarantor_count",
+    "business_description",
+    "key_risk_narrative",
+    "discrepancy_description"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "persona_id": {
+      "type": "string",
+      "description": "Zero-padded 3-digit integer followed by vertical and difficulty slug, e.g. '001-services-easy'.",
+      "pattern": "^[0-9]{3}-[a-z]+-[a-z]+$"
+    },
+    "vertical": {
+      "type": "string",
+      "enum": ["services", "retail", "restaurant"],
+      "description": "Business vertical. See PERSONA_SPEC.md §2."
+    },
+    "revenue_band": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "description": "Annual revenue band. small=$200K-$750K, medium=$750K-$3M, large=$3M-$10M. See PERSONA_SPEC.md §3."
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "moderate", "hard"],
+      "description": "Overall underwriting difficulty. See PERSONA_SPEC.md §8."
+    },
+    "revenue_trend": {
+      "type": "string",
+      "enum": ["growing", "stable", "declining"],
+      "description": "3-year revenue trajectory."
+    },
+    "gross_margin_band": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Gross margin band. low=<35%, medium=35-60%, high=>60%."
+    },
+    "dscr_band": {
+      "type": "string",
+      "enum": ["strong", "adequate", "thin", "insufficient"],
+      "description": "Debt service coverage ratio band. strong=>1.50x, adequate=1.20-1.50x, thin=1.00-1.20x, insufficient=<1.00x."
+    },
+    "leverage_band": {
+      "type": "string",
+      "enum": ["low", "moderate", "high"],
+      "description": "Leverage band (total debt / EBITDA). low=<2x, moderate=2-4x, high=>4x."
+    },
+    "messiness_traits": {
+      "type": "array",
+      "description": "Set of messiness trait codes from PERSONA_SPEC.md §4. Minimum 2 items required.",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "REV-SEASONAL",
+          "REV-LUMPY",
+          "REV-MIXED-CASH",
+          "REV-DECLINE",
+          "REV-CONCENTRATION",
+          "EXP-ADDBACKS",
+          "EXP-NON-RECURRING",
+          "EXP-RECLASSIFY",
+          "OWN-EXCESS-DRAWS",
+          "OWN-SUPPRESSED",
+          "OWN-MIXED-PERSONAL",
+          "BS-RELATED-PARTY",
+          "BS-INTANGIBLES",
+          "BS-UNDISCLOSED-DEBT",
+          "BS-STALE-APPRAISAL",
+          "DOC-PRIOR-YEAR-ONLY",
+          "DOC-INTERNAL-ONLY",
+          "DOC-FISCAL-YEAR",
+          "DOC-RESTATEMENT"
+        ]
+      }
+    },
+    "primary_discrepancy": {
+      "type": "string",
+      "enum": [
+        "DISC-REV-DEP",
+        "DISC-DRAW-OUTFLOW",
+        "DISC-DEBT-UNDISCLOSED",
+        "DISC-COLLATERAL-STALE"
+      ],
+      "description": "The single intentional discrepancy Phase 3 reconciliation must detect. See PERSONA_SPEC.md §5."
+    },
+    "discrepancy_magnitude": {
+      "type": "string",
+      "enum": ["minor", "moderate", "material"],
+      "description": "Severity of the intentional discrepancy. minor=<10%, moderate=10-25%, material=>25%."
+    },
+    "owner_ownership_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage of the business owned by the principal. See PERSONA_SPEC.md §6."
+    },
+    "owner_years_in_industry": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Years of experience in the vertical."
+    },
+    "owner_key_person_risk": {
+      "type": "boolean",
+      "description": "True if the owner is the sole operational key person."
+    },
+    "owner_personal_credit": {
+      "type": "string",
+      "enum": ["strong", "adequate", "weak"],
+      "description": "Personal credit profile. strong=720+, adequate=660-719, weak=<660."
+    },
+    "owner_personal_liquidity": {
+      "type": "string",
+      "enum": ["high", "moderate", "low"],
+      "description": "Personal liquidity coverage. high=>6 months, moderate=3-6 months, low=<3 months."
+    },
+    "owner_hollow_guarantee_risk": {
+      "type": "boolean",
+      "description": "True if the personal guarantee would be practically unenforceable."
+    },
+    "loan_type": {
+      "type": "string",
+      "enum": ["term_loan", "revolving_loc", "equipment_loan", "sba_7a"],
+      "description": "Type of loan facility requested. See PERSONA_SPEC.md §7."
+    },
+    "loan_purpose": {
+      "type": "string",
+      "enum": [
+        "working_capital",
+        "equipment_purchase",
+        "real_estate",
+        "acquisition",
+        "refinance",
+        "expansion"
+      ],
+      "description": "Stated purpose of the loan proceeds."
+    },
+    "requested_amount_band": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "description": "Loan size band, maps to revenue bands in §3."
+    },
+    "collateral_type": {
+      "type": "string",
+      "enum": [
+        "owner_occupied_cre",
+        "equipment",
+        "ar_inventory",
+        "unsecured",
+        "mixed"
+      ],
+      "description": "Primary collateral backing the loan."
+    },
+    "guarantor_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "description": "Number of personal guarantors."
+    },
+    "business_description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "1-2 sentence plain-English description of the business for use in generation prompts."
+    },
+    "key_risk_narrative": {
+      "type": "string",
+      "minLength": 10,
+      "description": "1-2 sentence plain-English summary of the primary underwriting risk."
+    },
+    "discrepancy_description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "1 sentence describing the specific inconsistency the Day 5 generation prompt should embed."
+    }
+  }
+}

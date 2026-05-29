@@ -1,0 +1,39 @@
+{
+  "persona_id": "003-restaurant-hard",
+  "vertical": "restaurant",
+  "revenue_band": "small",
+  "difficulty": "hard",
+
+  "revenue_trend": "declining",
+  "gross_margin_band": "low",
+  "dscr_band": "thin",
+  "leverage_band": "high",
+
+  "messiness_traits": [
+    "REV-MIXED-CASH",
+    "REV-DECLINE",
+    "EXP-ADDBACKS",
+    "OWN-MIXED-PERSONAL",
+    "BS-UNDISCLOSED-DEBT"
+  ],
+
+  "primary_discrepancy": "DISC-DEBT-UNDISCLOSED",
+  "discrepancy_magnitude": "material",
+
+  "owner_ownership_pct": 80,
+  "owner_years_in_industry": 6,
+  "owner_key_person_risk": true,
+  "owner_personal_credit": "weak",
+  "owner_personal_liquidity": "low",
+  "owner_hollow_guarantee_risk": true,
+
+  "loan_type": "sba_7a",
+  "loan_purpose": "refinance",
+  "requested_amount_band": "small",
+  "collateral_type": "unsecured",
+  "guarantor_count": 2,
+
+  "business_description": "A fast-casual Mexican restaurant in Chicago's Logan Square neighborhood with annual revenue declining from $680K to $520K over three years; the owner handles all cash sales personally and reconciles them to a POS system on a weekly basis.",
+  "key_risk_narrative": "Declining revenue, high Prime Cost (~68%), and a cash-heavy operation with owner-managed cash handling create both a repayment capacity risk and a documentation reliability risk that make normalized DSCR difficult to establish with confidence.",
+  "discrepancy_description": "Bank statements show a recurring $2,200/month ACH outflow to an entity not identified in the tax return liabilities schedule, consistent with an undisclosed equipment financing obligation that would reduce adjusted DSCR below 1.00x."
+}

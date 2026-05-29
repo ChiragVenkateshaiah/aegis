@@ -12,14 +12,14 @@
 ## Phase 1 — Foundation (Week 1)
 
 **Goal:** Lock the data model, understand the domain, generate the synthetic corpus seed, *and* establish the Claude Code workflow surfaces (CLAUDE.md, slash commands, hooks) that the rest of the build will use.
-**Status:** ◐ in progress (Day 1 ✅ · Day 01.5 ✅ complete — Day 2 next: OCC credit-memo template study)
+**Status:** ◐ in progress (Day 1 ✅ · Day 01.5 ✅ · Day 2 ✅ · Day 3 ✅ complete — Day 4 next: Ittelson checkpoint + memo-template ↔ ontology mapping)
 
 | # | Deliverable | CCF-A | Status | Notes |
 |---|---|---|---|---|
 | 1.1 | Read first half of Ittelson (Chapters 1–8) | — | ☐ | Evenings |
-| 1.2 | Study a real credit memo template (OCC) | — | ☐ | 1 evening block |
+| 1.2 | Study a real credit memo template (OCC) | — | ✅ | **Day 2 complete 2026-05-21 — 14-section OCC breakdown, 25-term glossary, 7 ontology gaps logged** |
 | 1.3 | **Ontology schema — Postgres DDL** | **T5** | ✅ | **Day 1 complete 2026-05-19 — DDL + seed + check.sh all-green** |
-| 1.4 | Synthetic borrower persona spec (30–50 personas) | T3 | ☐ | services / retail / restaurant |
+| 1.4 | Synthetic borrower persona spec (30–50 personas) | T3 | ✅ | **Day 3 complete 2026-05-29 — PERSONA_SPEC.md, persona.schema.json, 3 validated examples** |
 | 1.5 | Generate v0 synthetic corpus (3 borrowers end-to-end as smoke test) | T3 | ☐ | end of week |
 | 1.6 | Lock data dictionary (per ontology table) | — | ☐ | derives from 1.3 |
 | **1.7** | **`CLAUDE.md` at repo root** (memory file) | **T2** | ✅ | **shipped 2026-05-19** — project conventions, file map, model preferences, the "read AGENT_PRIMER.md first" rule |

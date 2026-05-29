@@ -1,0 +1,36 @@
+{
+  "persona_id": "001-services-easy",
+  "vertical": "services",
+  "revenue_band": "medium",
+  "difficulty": "easy",
+
+  "revenue_trend": "growing",
+  "gross_margin_band": "high",
+  "dscr_band": "strong",
+  "leverage_band": "low",
+
+  "messiness_traits": [
+    "EXP-ADDBACKS",
+    "OWN-EXCESS-DRAWS"
+  ],
+
+  "primary_discrepancy": "DISC-DRAW-OUTFLOW",
+  "discrepancy_magnitude": "minor",
+
+  "owner_ownership_pct": 100,
+  "owner_years_in_industry": 14,
+  "owner_key_person_risk": true,
+  "owner_personal_credit": "strong",
+  "owner_personal_liquidity": "high",
+  "owner_hollow_guarantee_risk": false,
+
+  "loan_type": "term_loan",
+  "loan_purpose": "working_capital",
+  "requested_amount_band": "small",
+  "collateral_type": "ar_inventory",
+  "guarantor_count": 1,
+
+  "business_description": "A 14-year-old B2B IT consulting firm providing managed services and cloud migration projects to mid-market clients across the Pacific Northwest, generating approximately $1.4M in annual revenue.",
+  "key_risk_narrative": "Owner is the sole technical lead and primary client relationship holder; key-person departure would materially impair revenue continuity and service delivery.",
+  "discrepancy_description": "Tax return Schedule K-1 shows owner compensation of $95,000, but bank statement outflows to the owner's personal account total approximately $112,000 on an annualised basis — a ~$17,000 gap consistent with undeclared draws."
+}
